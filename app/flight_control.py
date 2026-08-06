@@ -11,3 +11,9 @@ def is_altitude_safe(
         raise ValueError("Minimum altitude cannot be negative.")
 
     return current_altitude >= minimum_altitude
+
+def is_airspeed_valid(airspeed: float) -> bool:
+    """Return True when the airspeed is >=0 knots."""
+    if airspeed < 0:
+        raise ValueError("Airspeed cannot be negative.")
+    return True
